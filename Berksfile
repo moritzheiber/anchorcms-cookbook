@@ -1,8 +1,9 @@
-site :opscode
+source 'https://supermarket.getchef.com'
 
 metadata
 
-cookbook 'php-fpm'
-cookbook 'application_nginx', git: 'https://github.com/poise/application_nginx.git'
-cookbook 'application_php', git: 'https://github.com/poise/application_php.git'
+cookbook 'application'
 cookbook 'database'
+
+# 2014-09-08 The mysql cookbook (again) is broken, using a "safe" release
+cookbook 'mysql', git: 'https://github.com/opscode-cookbooks/mysql.git', tag: 'v5.5.0'
