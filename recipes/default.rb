@@ -4,7 +4,7 @@ include_recipe 'anchorcms::service'
 application 'anchorcms' do
   path node['anchorcms']['app_root']
   repository 'https://github.com/anchorcms/anchor-cms.git'
-  revision 'master'
+  revision node['anchorcms']['git_branch']
   owner node['anchorcms']['deploy_user']
   group node['anchorcms']['deploy_group']
   packages ['git','php5-cli','php5-curl','php5-mcrypt','php5-gd','php5-mysql']
