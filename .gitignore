@@ -1,3 +1,4 @@
+*.swp
 .kitchen/
 .kitchen.local.yml
 vendor/
